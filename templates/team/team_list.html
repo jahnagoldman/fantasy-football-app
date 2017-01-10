@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Your Team</h1>
+<ul>
+
+{% for key in data %}
+    <li> {{ key.name }} - {{ key.date }} - {{ key.player_id }} - {{ key.stat }} - {{ key.amount }}</li>
+{% empty %}
+    <li>No team members yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}
