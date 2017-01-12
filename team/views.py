@@ -9,5 +9,4 @@ from team import services
 
 class TeamPage(generic.TemplateView):
     def get(self,request):
-        team_list = services.get_player_data()
-        return render(request, 'team/team_list.html', {'data': team_list})
+        return render(request, 'team/team_list.html')
