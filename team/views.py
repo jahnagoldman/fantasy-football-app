@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 from django.views import generic
 
-from team import services
+#from team import services
 
 
 class TeamPage(generic.TemplateView):

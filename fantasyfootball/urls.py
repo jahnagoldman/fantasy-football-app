@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^team/', include('team.urls')),
+    url(r'^playerdata/', include('playerdata.urls')),
     url(r'^admin/', admin.site.urls),
 ]
