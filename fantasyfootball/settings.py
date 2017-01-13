@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'playerdata.apps.PlayerdataConfig',
     'team.apps.TeamConfig',
     'django.contrib.admin',
     'django.contrib.auth',
