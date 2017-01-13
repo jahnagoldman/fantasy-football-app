@@ -10,8 +10,9 @@ class Player(models.Model):
     teamAbbreviation = models.CharField(max_length=50)
     teamCity = models.CharField(max_length=100)
     teamName = models.CharField(max_length=100)
-    #def __str__(self):
-     #   self.playerlastName
+
+    def __str__(self):
+        return self.playerlastName, self.playerfirstName
 
 class PlayerRawStats(models.Model):
     playerStatKey = models.CharField(max_length=100)
@@ -19,5 +20,6 @@ class PlayerRawStats(models.Model):
     playerID = models.ForeignKey(Player, on_delete=models.CASCADE)
     statisticType = models.CharField(max_length=100)
     statAmt = models.IntegerField(default=0)
-    #def __str__(self):
-     #   return self.playerID
+
+    def __str__(self):
+        return self.playerStatKey
