@@ -24,5 +24,12 @@ class PlayerRawStats(models.Model):
     def __str__(self):
         return self.playerStatKey
 
-    #test
+class PergameTotals(models.Model):
+    pergameTotalKey = models.CharField(max_length=100)
+    dateStat = models.DateField('date of stat')
+    playerID = models.CharField(max_length=50)
+    statAmt = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.pergameTotalKey
 
