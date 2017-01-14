@@ -16,10 +16,11 @@ class Player(models.Model):
 
 class PlayerRawStats(models.Model):
     playerStatKey = models.CharField(max_length=100)
-    dateStat = models.DateTimeField('date of stat')
-    playerID = models.ForeignKey(Player, on_delete=models.CASCADE)
+    dateStat = models.DateField('date of stat')
+    playerID = models.CharField(max_length=50)
     statisticType = models.CharField(max_length=100)
-    statAmt = models.IntegerField(default=0)
+    statAmt = models.FloatField(default=0)
 
     def __str__(self):
         return self.playerStatKey
+
